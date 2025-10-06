@@ -1,3 +1,14 @@
-int calculate() {
-  return 6 * 7;
+int calculargotitas(List<int> alturas) {
+  if (alturas.length < 3) {
+    return 0;
+  }
+  int totalAgua = 0;
+  int punteroIzquierdo = 0;
+  int punteroDerecho = alturas.length - 1;
+
+  int maximoIzquierdo = 0;
+  int maximoDerecho = 0;
+
+  
+
 }

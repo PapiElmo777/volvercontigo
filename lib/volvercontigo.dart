@@ -8,8 +8,17 @@ int calculargotitas(List<int> alturas) {
   int maximoIzquierdo = 0;
   int maximoDerecho = 0;
 
-  while (punteroIzquierdo < punteroDerecho) {
-    break; 
+   while (punteroIzquierdo < punteroDerecho) {
+    if (alturas[punteroIzquierdo] < alturas[punteroDerecho]) {
+      if (alturas[punteroIzquierdo] >= maximoIzquierdo) {
+        maximoIzquierdo = alturas[punteroIzquierdo];
+      } else {
+        totalAgua += maximoIzquierdo - alturas[punteroIzquierdo];
+      }
+      punteroIzquierdo++;
+    } else {
+      punteroDerecho--;
+    }
   }
 
   return totalAgua;
